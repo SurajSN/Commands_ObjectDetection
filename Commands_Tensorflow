@@ -1,0 +1,31 @@
+https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html
+
+
+python virtualenv/Lib/site-packages/labelImg/labelImg.py  workspace/training_demo/images_cheque/test
+
+python scripts/preprocessing/generate_tfrecord.py
+[open the file and modify prefix_as_per_project = '_cheque']
+[create .pbtxt file in annotations folder with class names and corresponding label ID]
+[modify batch size =1 to avoid memory error]
+
+!python /content/models/research/object_detection/model_main_tf2.py \
+    --pipeline_config_path=/content/data_insulators/models/faster_rcnn_resnet101/cheque_faster_rcnn_resnet101.config \
+    --model_dir=/content/train_dir \
+    --verbose=1 \
+    --checkpoint_every_n=500
+
+!python /content/models/research/object_detection/model_main_tf2.py \
+    --pipeline_config_path=/content/data_insulators/models/faster_rcnn_resnet101/cheque_faster_rcnn_resnet101.config \
+    --model_dir=/content/train_dir \ 
+    --checkpoint_dir=/content/train_dir
+
+python exporter_main_v2.py --input_type image_tensor --pipeline_config_path=models/logo/faster_rcnn_resnet101/logo_faster_rcnn_resnet101.config --trained_checkpoint_dir=models/logo/faster_rcnn_resnet101/checkpoint --output_directory=models/logo/faster_rcnn_resnet101/output_files
+
+
+
+python exporter_main_v2.py --input_type image_tensor --pipeline_config_path=models/cheque/faster_rcnn_resnet151_v2/cheque_faster_rcnn_resnet152_v1.config --trained_checkpoint_dir=models/cheque/faster_rcnn_resnet151_v2/new_7/checkpoint --output_directory=models/cheque/faster_rcnn_resnet151_v2/new_7/output_files
+
+
+python model_inference.py
+
+python model_main_tf2.py --pipeline_config_path=pipeline_signature.config --model_dir=training-dir
