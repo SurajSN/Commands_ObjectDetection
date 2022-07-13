@@ -1,1 +1,3 @@
 cosine decay rule : https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/CosineDecay
+
+to evaluate the datasets - labelling https://voxel51.com/docs/fiftyone/
