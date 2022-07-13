@@ -14,6 +14,7 @@ https://stackoverflow.com/questions/33330771/git-lfs-this-exceeds-githubs-file-s
 git clone https://github.com/SurajSN/ODModel.git
 cd ODModel
 git lfs track "*.h5"
+git add .gitattributes
 git add mask_rcnn_roof_0008.h5
 git lfs migrate import --include="*.h5" {if required}
 git config --global user.email "sahukarsuraj@gmail.com"
