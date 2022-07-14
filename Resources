@@ -2,6 +2,10 @@
 <H1> Converting Object Detection API to Tensorflow Lite </H1>
 
 https://colab.research.google.com/github/tensorflow/models/blob/master/research/object_detection/colab_tutorials/convert_odt_model_to_TFLite.ipynb#scrollTo=FT3-38PJsSOt
+
+<H1>interpreter invoke () taking time</H1>
+
+https://github.com/tensorflow/tensorflow/issues/24665
 ##################################################
 
 ##################################################
