@@ -1,0 +1,2 @@
+tensorflowjs_converter input_path # path to the saved_model and not checkpoint output_path # path where the .bins to be saved
+saved_model_cli show --dir path to the saved_model and not checkpoint [like above input_path] --all
