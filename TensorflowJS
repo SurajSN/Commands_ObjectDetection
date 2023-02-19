@@ -1,2 +1,9 @@
-tensorflowjs_converter input_path # path to the saved_model and not checkpoint output_path # path where the .bins to be saved
+tensorflowjs_converter input_path output_path 
 saved_model_cli show --dir path to the saved_model and not checkpoint [like above input_path] --all
+tensorflowjs_converter \
+    --input_format=tf_saved_model \ [retain]
+    --output_format=tfjs_graph_model \ [retain]
+    --signature_name=serving_default \ [retain]
+    --saved_model_tags=serve \ [retain]
+    /mobilenet/saved_model \ # path to the saved_model under output_files and not checkpoint
+    /mobilenet/web_model # path where the .bins to be saved
