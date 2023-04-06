@@ -1,3 +1,10 @@
+##################### INSTALL TENSORFLOW ##################### ##################### 
+## install these DLLs by downloading "Microsoft C++ Redistributable for Visual Studio 2015, 2017 and 2019"
+https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
+https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#tensorflow-installation
+
+##################### ##################### ##################### ##################### 
+
 https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html
 
 
